@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-3#c4xlfcjvf7hgp2g=1qvua$8l2od@@u^4wag-b9tu@4bt$z7p')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG', 'True') != 'False')
 
 ALLOWED_HOSTS = []
 
@@ -159,18 +159,4 @@ LOGIN_REDIRECT_URL = '/authentication/register_step1/'
 LOGOUT_REDIRECT_URL = '/'
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
-
-# Django storage
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# AWS 접근 처리
-AWS_ACCESS_KEY_ID = 'AKIATG2L5Q6FUTL3A7XP'
-
-AWS_SECRET_ACCESS_KEY = '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'
-
-AWS_STORAGE_BUCKET_NAME = 'rocket-folio'
-
-AWS_S3_SIGNATURE_VERSION = 's3v4'
-
-AWS_S3_REGION_NAME = 'ap-northeast-2'
 
