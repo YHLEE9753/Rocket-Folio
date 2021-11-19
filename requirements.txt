@@ -11,6 +11,7 @@ Django==3.2.5
 django-allauth==0.45.0
 django-import-export==2.6.1
 django-rest-auth==0.9.5
+django-storages==1.12.3
 djangorestframework==3.12.4
 et-xmlfile==1.1.0
 idna==3.2
