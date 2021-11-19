@@ -1,0 +1,87 @@
+{% extends "RocketFolio/templates/sidebar.html" %} {% block contents %}
+{% load static %}
+<link rel="stylesheet" property="stylesheet" href="{% static 'stock/css/myStock.css' %}">
+<script type="text/javascript" src="{% static 'stock/js/myStock.js' %}"></script>
+<div class="container_mystock">
+  <div class="portfolio_container">
+    <div class="portfolio_title">Portfolio</div>
+    <div class="portfolio_title_2">{{nickname}}님의 주식 포트폴리오 현황</div>
+    <div class="total_portfolio_info">
+      <div class="total_asset_info">
+        <div class="total_asset_amount">
+          <div class="total_asset_info_title">총 자산</div>
+          <div class="total_asset_info_data" id="asset_amount">
+            {{stock_total_asset}} 원
+          </div>
+        </div>
+        <div class="total_buying_amount">
+          <div class="total_asset_info_title">매수금액</div>
+          <div class="total_asset_info_data" id="buying_amount">
+            {{stock_total_buyprice}} 원
+          </div>
+        </div>
+      </div>
+      <div class="total_gain_loss_info">
+        <div id="gain_loss_title">평가손익</div>
+        <div class="total_gain_loss_data">
+          <div id="gain_loss_amount">{{subprice}} 원</div>
+          <div id="gain_loss_percentage">({{stock_total_rate}})%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio_box">
+      <div id="chart-1"></div>
+      {{ output|safe }}
+      <div class="current_asset_container">
+        <div class="current_assets_title">자산별 현황</div>
+        <div class="asset_box">
+          <div class="stocks_title">주식</div>
+          <div class="asset_box2">
+            {% for data in stock_data %}
+            <form action="{% url 'deleteStock' data.name%}" method="POST">
+              {% csrf_token %}
+              <div class="stock_box">
+                <div class="stock_info">
+                  <div class="stock_info_name">
+                    <div class="stock_name">{{data.name}}</div>
+                    <div class="stock_code">{{data.code}}</div>
+                    <div class="stock_purchase_price">보유수량 {{data.quantity}}</div>
+                  </div>
+                  <div class="stock_price_info">
+                    <div class="stock_price_info_box">
+                      <div class="stock_price">{{data.profit_asset}}원</div>
+                      <div class="stock_gain_loss_rate">{{data.profit_rate}}%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stock_price_detail_info">
+                  <div class="stock_price_detail_info_box">
+                      <div class="price_title">현재가</div>
+                      <div class="price_value">{{data.real_price}}</div>
+                  </div>
+                  <div class="stock_price_detail_info_box">
+                    <div class="price_title">매입 단가</div>
+                    <div class="price_value" id="rate">{{data.buy_price}}</div>
+                  </div>
+                  <div class="stock_price_detail_info_box">
+                      <div class="price_title">총매입 단가</div>
+                      <div class="price_value">{{data.profit_asset}}</div>
+                  </div>
+                  <div class="stock_price_detail_info_box" id="special_box">
+                    <div class="price_title">현재 비중</div>
+                    <div class="price_value">{{data.property}}%</div>
+                  </div>
+                </div>
+                <button class="delete_button" type="submit"><img src="/static/stock/img/delete.svg" /></button>
+              </div>
+            </form>
+            {% endfor %}
+            <div class="add_button" id="stock_detail_page"><a href="{% url 'plusStock'%}"><img src="/static/stock/img/add.svg" /></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

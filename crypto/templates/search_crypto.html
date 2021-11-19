@@ -1,0 +1,91 @@
+{% extends "RocketFolio/templates/sidebar.html" %} {% block contents %} 
+{% load static %}
+<link rel="stylesheet" property="stylesheet" href="{% static 'stock/css/plusStock.css' %}"/>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<div class="container_search">
+    <div class="header">
+      <button class="return_button" type="button">
+        <a href="{% url 'my_crypto' %}">
+          <img src="/static/stock/img/return_to_mystock.svg" />
+        </a>
+      </button>
+      <input class="searh_bar" type="text" id="search_crypto" name="company_name" placeholder="검색"/>
+      <button class="reset_icon" type="button">
+        <a href="">
+          <img src="/static/stock/img/reset.png" />
+        </a>
+      </button>
+    </div>
+    
+    <div id="crypto_list" style="justify-content: center; margin-left: 55px; margin-top: 60px;">
+
+    </div>
+
+
+    <div class="number_and_price_container">
+      <div id="selected_card"></div>
+      <div class="number_and_price">
+        <div class="number_group">
+          <div class="number_and_price_title">수량</div>
+          <input
+            id="quantity"
+            class="number_bar"
+            type="text"
+            name="buy_number"
+            placeholder="암호화폐 수량을 입력하세요"
+          />
+        </div>
+        <div class="price_group">
+          <div class="number_and_price_title">가격</div>
+          <input
+            id="price"
+            class="prince_bar"
+            type="text"
+            name="buy_price"
+            placeholder="암호화폐 가격을 입력하세요"
+          />
+        </div>
+        <button onclick="add_crypto_asset();" class="summit_button" type="button">종목등록</button>
+      </div>
+    </div>
+</div>
+<script>
+$('.number_and_price_container').hide();
+$("#search_crypto").on("keyup", function() {
+  $("#crypto_list").empty();
+        var searchText = document.getElementById('search_crypto').value;
+
+        url = '/crypto/search_ticker/'+searchText+'/';
+        $.ajax({
+              type: "GET",
+              url: url,     
+              async: true,
+              success: function(res){        
+              console.log(res);
+              var crypto_list = res['tickers'];
+              for(var crypto of crypto_list){
+                  $("#crypto_list").append(
+                    '<a style="text-decoration:none; color: black;" href="/crypto/add_crypto_asset/'+crypto[0]+'/">'+
+                    '<div class="card" onclick="show_form("'+crypto[0]+'","'+crypto[1]+'","'+crypto[2]+'","'+crypto[3]+'");" style="width: 100%; height: 100px; margin-bottom: 60px;">'+
+                    '<div style="display: flex;">'+
+                      '<img style="width:80px; margin-right: 30px;" src="https://static.upbit.com/logos/'+crypto[0]+'.png" alt="">'+
+                      '<div>'+
+                        '<h2>'+crypto[1]+'</h2>'+
+                        '<h3>평가금액 : '+crypto[3]+'</h3>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div style="display: flex;">'+
+                      '<p style="margin-right: 20px;">'+crypto[0]+'</p>'+
+                      '<p style="margin-right: 20px;">|</p>'+
+                      '<p>'+crypto[2]+'</p>'+
+                    '</div>'+
+                  '</div>'+
+                  '</a>'
+                  );
+                    } 
+                },       
+                });
+});
+</script>
+{% endblock %}

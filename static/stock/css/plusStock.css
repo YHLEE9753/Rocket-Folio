@@ -1,0 +1,118 @@
+body{
+  zoom:0.7;
+}
+.container_search {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 83%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 0px;
+  background: #7479ff;
+  padding: 20px;
+  padding-left: 0;
+}
+
+.searh_bar {
+  padding-top: 10px;
+  width: 1300px;
+  height: 60px;
+  border: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.return_button {
+  position: relative;
+  right: 80px;
+  background: #7479ff;
+  border: 0;
+}
+.reset_icon {
+  width: 70px;
+  height: 71px;
+  padding: 0.5em 0.2em;
+  background: #ffffff;
+  border: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.reset_icon img {
+  padding-right: 100px;
+  width: 50px;
+  height: 50px;
+}
+
+.number_and_price_container {
+  display: none;
+}
+.number_and_price {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.number_bar,
+.prince_bar {
+  width: 1200px;
+  height: 60px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 4;
+  margin-bottom: 150px;
+}
+.number_and_price_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0f1219;
+}
+input {
+  padding-left: 40px;
+  font-size: 24px;
+}
+::placeholder {
+  padding-left: 60px;
+  font-size: 24px;
+}
+.stock_item {
+  display: flex;
+  justify-content: center;
+}
+.stock_btn {
+  border: 0;
+  background-color: #ffffff;
+  padding: 30px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 41px;
+}
+.stock_info {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+#stock_name,
+#stock_code {
+  flex-basis: 20%;
+}
+.summit_button {
+  width: 1300px;
+  background: #3c42d6;
+  border: 0;
+  color: #ffffff;
+  border-radius: 40px;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  padding: 20px;
+}

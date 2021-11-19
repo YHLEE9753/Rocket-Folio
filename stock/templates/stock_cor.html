@@ -1,0 +1,275 @@
+{% extends "RocketFolio/templates/sidebar.html" %} {% block contents %} 
+{% load static %}
+<script
+  type="text/javascript"
+  src="{% static 'stock/js/stockCor.js' %}"
+></script>
+<link
+  rel="stylesheet"
+  property="stylesheet"
+  href="{% static 'stock/css/stockCor.css' %}"
+/>
+<div class="container_cor_backtesting">
+  <div class="cor_title_box">
+    <div class="cor_title">Portfolio Analysis</div>
+    <div id="title2" class="cor_title">
+      이 포트폴리오의 {{n_year}}년({{n_month}}달)간 수익률과 연이율은,
+    </div>
+  </div>
+  <div class="portfolio_summary">
+    <div class="average_gain_rate_correlation_container">
+      <div
+        class="average_gain_rate_correlation_box"
+        id="special_average_gain_rate_correlation_box"
+      >
+        <div class="price_title">수익률</div>
+        <div class="price_value" id="rate2">{{stock_total_rate}}%</div>
+      </div>
+      <div class="average_gain_rate_correlation_box">
+        <div class="price_title">연이율 (CAGR)</div>
+        <div class="price_value" id="rate2">{{CAGR}}%</div>
+      </div>
+    </div>
+    <div class="stock_info_box">
+      <div class="stock_info">
+        <div class="stock_info_name">
+          <div class="asset_stock_name">{{max_stock.name}}</div>
+          <div class="stock_code">{{max_stock.code}}</div>
+          <div class="stock_purchase_price">
+            보유수량 {{max_stock.quantity}}
+          </div>
+        </div>
+        <div class="stock_price_info">
+          <div class="stock_price_info_box">
+            <div class="stock_price">{{max_stock.profit_asset}}</div>
+            <div class="stock_gain_loss_rate">{{max_stock.profit_rate}}%</div>
+          </div>
+        </div>
+      </div>
+      <div class="stock_info">
+        <div class="stock_info_name">
+          <div class="asset_stock_name">{{min_stock.name}}</div>
+          <div class="stock_code">{{min_stock.code}}</div>
+          <div class="stock_purchase_price">
+            보유수량 {{min_stock.quantity}}
+          </div>
+        </div>
+        <div class="stock_price_info">
+          <div class="stock_price_info_box">
+            <div class="stock_price">{{min_stock.profit_asset}}</div>
+            <div class="stock_gain_loss_rate">{{min_stock.profit_rate}}%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cor_title_box">
+    <div class="cor_title">Asset Analysis</div>
+    <div id="title2" class="cor_title">
+      상관관계를 알아보고 싶은 종목을 선택해주세요!
+    </div>
+  </div>
+  <div class="asset_analysis_box">
+    <div class="cor_form_value_container">
+      <div class="cor_form_container">
+        <form
+          class="selected_stocks"
+          action="{% url 'stock_cor'%}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <select name="name1" id="">
+            <option value="none">종목1</option>
+            {% for name in allK %}
+            <option value="{{name}}" name="check1">{{name}}</option>
+            {% endfor %}
+          </select>
+          <select name="name2" id="">
+            <option value="none">종목2</option>
+            {% for name in allK %}
+            <option value="{{name}}" name="check2">{{name}}</option>
+            {% endfor %}
+          </select>
+
+          <select name="name3" id="">
+            <option value="none">종목3</option>
+            {% for name in allK %}
+            <option value="{{name}}" name="check3">{{name}}</option>
+            {% endfor %}
+          </select>
+
+          <select name="name4" id="">
+            <option value="none">종목4</option>
+            {% for name in allK %}
+            <option value="{{name}}" name="check4">{{name}}</option>
+            {% endfor %}
+          </select>
+          <select name="name5" id="">
+            <option value="none">종목5</option>
+            {% for name in allK %}
+            <option value="{{name}}" name="check5">{{name}}</option>
+            {% endfor %}
+          </select>
+          <button class="analysis_button" type="submit">
+            <img src="{% static 'stock/img/analysis2.svg' %}" />
+            <div class="analysis_button_title">분석하기</div>
+          </button>
+        </form>
+      </div>
+      <div class="cor_box">
+        {% if result %}
+        <div class="cor_box_title">상관관계 분석</div>
+        <table class="type04">
+          {% for row in result %}
+          <tr>
+            {% for value in row %}
+            <td class="cor_values">{{value}}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+          <th></th>
+          {% for k in stocklist %}
+          <th class="stock_names" scope="row">{{k}}</th>
+          {% endfor %}
+        </table>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="cor_title">Back Testing</div>
+  <div class="backtesting">
+    <div class="backtesting_form_box">
+      <div class="backtesting_form_box2">
+        <div id="special_backtesting_form_title" class="backtesting_form_title">
+          이 포트폴리오를
+        </div>
+        <form id="backtesting_form" action="{% url 'stock_cor'%}" method="POST">
+          {% csrf_token %}
+          <select name="year" id="year_select">
+            <option value="2017" selected>2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+          </select>
+          <select name="month" id="month_select">
+            <option value="01" selected>01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <div id="special_title" class="backtesting_form_title">
+            부터 소지했을 경우,
+          </div>
+          <button class="analysis_button" id="special_button" type="submit">
+            <img src="{% static 'stock/img/analysis2.svg' %}" />
+            <div class="analysis_button_title">분석하기</div>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="backtesting_info">
+      <div class="backtesting_info_container">
+        <div class="backtesting_info_box">
+          <div class="price_title">과거 날짜</div>
+          <div class="price_value">{{start_date}}</div>
+        </div>
+        <div class="backtesting_info_box">
+          <div class="price_title">초기자본</div>
+          <div class="price_value">{{start_sum}}</div>
+        </div>
+      </div>
+      <div class="backtesting_info_container">
+        <div class="backtesting_info_box">
+          <div class="price_title">수익률</div>
+          <div class="price_value" id="rate">{{stock_total_rate}}%</div>
+        </div>
+        <div class="backtesting_info_box">
+          <div class="price_title">최종자본</div>
+          <div class="price_value">{{now_sum}}</div>
+        </div>
+      </div>
+      <div class="backtesting_info_container">
+        <div class="backtesting_info_box">
+          <div class="price_title">코스피 상승률</div>
+          <div class="price_value" id="rate">{{kospi_rate}}%</div>
+        </div>
+        <div class="backtesting_info_box">
+          <div class="price_title">연이율 (CAGR)</div>
+          <div class="price_value" id="rate">{{CAGR}}%</div>
+        </div>
+      </div>
+      <div class="backtesting_info_container">
+        <div class="backtesting_info_box">
+          <div class="price_title">코스닥 상승률</div>
+          <div class="price_value" id="rate">{{kosdaq_rate}}%</div>
+        </div>
+        <div class="backtesting_info_box">
+          <div class="price_title">최대낙폭(MDD)</div>
+          <div class="price_value" id="rate">{{MDD}}%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="backtesting_chart_box">
+      <div class="chart_title">Portfolio Growth</div>
+      <div id="chart-1"></div>
+      {{ output|safe }}
+      <div class="portfolio_assets_box">
+        <div class="portfolio_assets_pereoid">
+          <div class="portfolio_assets_name_rate">
+            <div class="portfolio_assets_rate">{{start_date}}</div>
+            <div class="portfolio_assets_rate_title">부터</div>
+          </div>
+          <div class="portfolio_assets_name_rate">
+            <div class="portfolio_assets_rate">{{today}}</div>
+            <div class="portfolio_assets_rate_title">까지</div>
+          </div>
+        </div>
+        <div class="portfolio_assets">
+          <div class="detail_title">
+            <div>종목</div>
+            <div id="detail_title2">처음가격</div>
+            <div>현재가격</div>
+            <div id="detail_title4">비중</div>
+            <div id="detail_title5">수익률</div>
+          </div>
+          {% for stock in stocks %}
+          <div class="portfolio_assets_name_rate">
+            <div class="detail_container">
+              <div class="portfolio_assets_rate">{{stock.name}}</div>
+            </div>
+            <div class="detail_container">
+              <div class="portfolio_assets_rate">
+                {{stock.backtesting_past_price}}
+              </div>
+              <div class="portfolio_assets_rate_title">원</div>
+            </div>
+            <div class="detail_container">
+              <div class="portfolio_assets_rate">{{stock.real_price}}</div>
+              <div class="portfolio_assets_rate_title">원</div>
+            </div>
+            <div class="detail_container">
+              <div class="portfolio_assets_rate">{{stock.property}}</div>
+              <div class="portfolio_assets_rate_title">%</div>
+            </div>
+            <div class="detail_container">
+              <div class="portfolio_assets_rate">{{stock.profit_rate}}</div>
+              <div class="portfolio_assets_rate_title">%</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

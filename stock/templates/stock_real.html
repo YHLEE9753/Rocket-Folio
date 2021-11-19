@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block contents %}
+test
+
+{% load static %}
+<img src="{% static 'stock/img/searchicon.png' %}" alt="">
+
+<a href="{% url 'myStock'%}">주식 자산 확인</a><br>
+<a href="{% url 'plusStock' %}">주식 자산 추가</a></br>
+<a href="{% url 'login'%}">돌아가기</a></br>
+<br>
+<br>
+<a href="{% url 'stock_cor'%}">자산 상관관계 확인하기(구)</a>
+<br>
+<br>
+<a href="{% url 'db_companyToDB'%}">회사 db 추가(주의! : 최초1번만 실행하시오)</a></br>
+<a href="{% url 'db_stockToDB'%}">models.py 에 300만개 데이터 추가(매우느림 + 주의! : 최초 1회 실행후 업데이트용 코드추가) 20160101 ~ 202108</a></br>
+<a href="{% url 'kospidataToDB'%}">kospi kosdaq 데이터 추가 (최초 1번만) 20170101 ~ 202108까지</a></br>
+<br>
+<a href="{% url 'deletStocklist'%}">stocklist, kospi_kosdaq 데이터 제거</a></br>
+
+
+{% endblock %}

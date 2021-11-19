@@ -1,0 +1,137 @@
+.login_container {
+  display: flex;
+  background: #3a48ce;
+}
+.login {
+  z-index: 2;
+  position: absolute;
+  width: 584px;
+  height: 763px;
+  left: 205px;
+  top: 204px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.title {
+  z-index: 3;
+  position: absolute;
+  width: 131px;
+  height: 72px;
+  left: 432px;
+  top: 259px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  color: #000000;
+}
+.id {
+  z-index: 3;
+  position: absolute;
+  width: 480px;
+  height: 64px;
+  left: 257px;
+  top: 401px;
+  background: #ecf3fe;
+  border: 0;
+}
+.password {
+  z-index: 3;
+  position: absolute;
+  width: 480px;
+  height: 64px;
+  left: 257px;
+  top: 475px;
+  background: #ecf3fe;
+  border: 0;
+}
+.error {
+  z-index: 4;
+  position: absolute;
+  width: 480px;
+  height: 50px;
+  left: 380px;
+  top: 540px;
+}
+.login_button {
+  z-index: 3;
+  position: absolute;
+  width: 480px;
+  height: 64px;
+  left: 257px;
+  top: 596px;
+  background: #3a48ce;
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+  border: 0;
+}
+.social_login_button {
+  z-index: 3;
+  position: absolute;
+  width: 480px;
+  height: 64px;
+  left: 257px;
+  top: 670px;
+  background: #fce893;
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+  border: 0;
+}
+.message {
+  z-index: 3;
+  position: absolute;
+  margin: 0px;
+  width: 220px;
+  height: 27px;
+  left: 400px;
+  top: 802px;
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+}
+.signup_button {
+  z-index: 3;
+  position: absolute;
+  width: 584px;
+  height: 112px;
+  left: 205px;
+  top: 855px;
+  background: #e0eafd;
+  border-radius: 0px 0px 10px 10px;
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  border: 0;
+}
+.explanation {
+  z-index: 3;
+  position: absolute;
+  width: 790px;
+  height: 175px;
+  left: 976px;
+  top: 259px;
+  font-family: Noto Sans CJK KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 53px;
+  color: #ffffff;
+}
+.explanation2 {
+  color: #fce893;
+}

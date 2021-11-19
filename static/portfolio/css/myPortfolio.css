@@ -1,0 +1,357 @@
+body{
+  zoom:0.7;
+}
+.container_myportfolio {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 83%;
+  background-color:black;
+}
+.portfolio_title {
+  margin-top: 40px;
+  padding-left: 50px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+  color: #3c42d6;
+}
+.portfolio_title_2 {
+  margin-top: 10px;
+  padding-left: 50px;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 71px;
+  color: #000000;
+}
+.total_portfolio_info {
+  margin-top: 25px;
+  padding-left: 50px;
+  display: flex;
+}
+.total_asset_info {
+  flex: 1;
+  border-right: 4px solid #bfd3f8;
+}
+.total_gain_loss_info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.total_asset_amount,
+.total_buying_amount {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 60px;
+}
+.total_buying_amount {
+  color: #727272;
+}
+.total_asset_info_title,
+#gain_loss_title {
+  padding-left: 40px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 22px;
+  line-height: 72px;
+}
+.total_asset_info_data,
+.total_gain_loss_data {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 72px;
+}
+.total_gain_loss_data {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  padding-right: 80px;
+  color: #ff0000;
+}
+#asset_amount {
+  font-size: 40px;
+}
+#buying_amount {
+  font-size: 26px;
+}
+#gain_loss_amount {
+  font-size: 40px;
+}
+#gain_loss_percentage {
+  font-size: 26px;
+}
+
+.portfolio_box {
+  margin-top: 50px;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  background: #f5f9ff;
+  border-radius: 30px;
+}
+
+#chart-1 {
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+.current_asset_container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.current_assets_title {
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 46px;
+  color: #000000;
+  border-bottom: 4px solid #bfd3f8;
+  padding-bottom:20px;
+  margin-right:50px;
+}
+.asset_box {
+  margin-top: 20px;
+  display: flex;
+}
+.stock_title_and_detail{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+.stocks_title {
+  margin-top: 100px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  font-weight:600;
+  line-height: 41px;
+  color: #4a536a;
+}
+.stocks_detail_button{
+  border:0;
+  background-color:#f5f9ff;
+  color:#4a536a;
+  font-size: 20px;
+  font-weight:600;
+  margin-right:70px;
+}
+.stock_box {
+  margin-top: 50px;
+  display: flex;
+  width: 650px;
+  border-radius: 30px;
+}
+.stock_info {
+  display:flex;
+  justify-content:space-between;
+  border: 0;
+  padding: 20px;
+  background: #ffffff;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
+}
+.stock_info_name {
+  display: flex;
+  flex-direction: column;
+}
+.stock_price_info {
+  display: flex;
+  flex-direction:column;
+  align-items:flex-end;
+  margin-left: 200px;
+  color: #ff0000;
+}
+.stock_name {
+  width: 200px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 41px;
+  color: #000000;
+}
+.stock_code,
+.stock_purchase_price {
+  margin-top:10px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 30px;
+  color: #4a536a;
+}
+.stock_price_box{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+.stock_price {
+  padding-bottom:10px;
+  font-weight: 600;
+  font-size: 26px;
+}
+#stock_gain_loss {
+  font-weight: 500;
+  font-size: 22px;
+}
+.delete_button{
+  border:0;
+  color:#FFFFFF;
+  background-color:#bfd3f8;
+  font-weight:550;
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+}
+.cryptocurrencies_title {
+  margin-top: 100px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 41px;
+  color: #4a536a;
+}
+.cryptocurrencies_box {
+  margin-top: 50px;
+  display: flex;
+  width: 650px;
+  border-radius: 30px;
+}
+.cryptocurrencies_info {
+  border: 0;
+  padding: 20px;
+  display: flex;
+  background: #ffffff;
+  border-radius: 30px;
+}
+.cryptocurrencies_info_name {
+  display: flex;
+  flex-direction: column;
+}
+.cryptocurrencies_price_info {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-left: 250px;
+  color: #ff0000;
+}
+.cryptocurrencies_name {
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 41px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.cryptocurrencies_code,
+.cryptocurrencies_purchase_price {
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 30px;
+  color: #4a536a;
+}
+#cryptocurrency_price {
+  margin-left: 60px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 28px;
+}
+#cryptocurrency_gain_loss {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.portfolio_analysis_title {
+  position: absolute;
+  left: 20.47%;
+  top: 220%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #000000;
+}
+.my_portfolio_analysis_title {
+  z-index: 1;
+  position: absolute;
+  left: 20.47%;
+  top: 226%;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+}
+.my_portfolio_analysis {
+  display: flex;
+  align-items: center;
+  width: 1447px;
+  height: 150px;
+  position: absolute;
+  left: 20.16%;
+  top: 253%;
+  background: #00ff00;
+  border-radius: 20px;
+}
+.average_yield_title {
+  margin-left: 30px;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+}
+.average_yield {
+  margin-left: 250px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  color: #ff0000;
+}
+.SD_of_yield_title {
+  margin-left: 100px;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+}
+.SD_of_yield {
+  margin-left: 250px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  color: #000000;
+}
+.correlation_analysis_title {
+  position: absolute;
+  left: 20.57%;
+  top: 280%;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+}

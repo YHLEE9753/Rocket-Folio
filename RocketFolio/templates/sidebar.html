@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <title>RocketFolio</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    {% load static %}
+    <script type="text/javascript" src="{% static "fusioncharts/fusioncharts.js" %}"></script>
+    <script type="text/javascript" src="{% static "fusioncharts/fusioncharts.charts.js" %}"></script>
+    <script type="text/javascript" src="{% static "fusioncharts/themes/fusioncharts.theme.fusion.js" %}"></script>
+
+  </head>
+  <body>
+    <style>
+      body {
+        margin:0px;
+        padding:0px;
+      }
+      .container{
+        width: 100%;
+        height: 100%;
+        display:flex;
+      }
+      .sidebar {
+        flex-basis: 17%;
+        display:flex;
+        flex-direction:column;
+        align-items :center;
+        position:sticky;
+        background: #3c42d6;
+        height:auto;
+      }
+      .total_logo{
+        position:sticky;
+        top:40px;
+        margin-top:40px;
+        margin-right:20px;
+      }
+      .logo {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 54px;
+        color: #ffffff;
+      }
+      .logo2 {
+        color: #ffe886;
+      }
+      .sidebar_options {
+        position:sticky;
+        top:200px;
+        margin-left:20px;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+      }      
+      .side_bar_btn{
+        display:flex;
+        position:sticky;
+        width:250px;
+        color: #FFFFFF;
+        text-decoration-color: #FFFFFF;
+        text-decoration:none;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        background-color:none;
+        
+        background: #3c42d6;
+        border:0;
+        border-bottom: 2px solid #FFFFFF;
+        margin-bottom: 50px;
+      }
+      .btn_components{
+        display:flex;
+      }
+
+      .btn_name{
+        margin-left:40px;
+        margin-top:10px;
+        vertical-align:baseline;
+      }
+      .user_options{
+        display:absolute;
+      }
+
+      .setting_options{
+        display:absolute;
+        margin-top:300px;
+      }
+      #option_btn_1, #option_btn_2{
+        border:0;
+      }
+      #option_btn_2{
+       
+      }
+    </style>
+    <div class="container">
+     <div class="sidebar">
+       <div class="total_logo">
+         <a style="text-decoration: none;" href="{% url 'myportfolio' %}">
+         <div class="logo">Rocket<span class="logo2">folio</span></div>
+        </a>
+       </div>
+        <div class="sidebar_options">
+          <div class="user_options">
+              <button class="side_bar_btn" onClick="location.href='{%url 'myportfolio'%}'">
+                <a style="text-decoration: none;" href="{% url 'myportfolio' %}">
+                <div class="btn_components">
+                  <img src="{% static 'portfolio/img/portfolio.svg' %}" />
+                  <div style="color: white;" class="btn_name">Portfolio</div>
+                </div>
+              </a>
+              </button>
+              <button class="side_bar_btn" onClick="location.href='{%url 'stock_cor' %}'">
+                <div class="btn_components">
+                  <img src="{% static 'portfolio/img/analysis.svg' %}">
+                  <div class="btn_name">Testing</div>
+                </div>
+              </button>
+          </div>
+          <div class="setting_options">
+                <button id="option_btn_1" class="side_bar_btn" onClick="location.href='{%url 'logout' %}'">
+                  <img src="{% static 'portfolio/img/user.svg' %}" />
+                  <div class="btn_name">Logout</div>
+                </button>
+                <button id="option_btn_2"class="side_bar_btn">
+                  <div class="btn_components">
+                    <img src="{% static 'portfolio/img/setting.svg' %}">
+                    <div class="btn_name">Setting</div>
+                  </div>
+                </button>
+          </div>
+        </div>
+      </div>
+    {%block contents %} {%endblock%}
+    </div>
+  </body>
+</html>

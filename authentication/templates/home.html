@@ -1,0 +1,24 @@
+{% load socialaccount %} {% providers_media_js %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>메인페이지</h1>
+    <div class="container">
+      <a href="{%url 'index'%}">account 회원가입 로그인 부분 - 이용훈</a><br />
+      <a href="{% url 'stock_real'%}">Stock - 이용훈</a><br />
+      <a href="/accounts/signup">구글 회원가입</a><br />
+      <br />
+      {% if user.is_authenticated %}
+      <a href="/accounts/logout">로그아웃</a>
+      <br />
+      {{user.username}}님이 로그인 중 {% else %}
+      <a href="{% provider_login_url 'google' %}">구글 로그인</a>
+      {% endif %}
+    </div>
+  </body>
+</html>

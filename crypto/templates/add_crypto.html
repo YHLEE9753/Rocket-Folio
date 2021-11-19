@@ -1,0 +1,66 @@
+{% extends "RocketFolio/templates/sidebar.html" %} {% block contents %} 
+{% load static %}
+<link rel="stylesheet" property="stylesheet" href="{% static 'stock/css/plusStock.css' %}"/>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<div class="container_search">
+    <div class="header">
+      <button class="return_button" type="button">
+        <a href="{% url 'my_crypto' %}">
+          <img src="/static/stock/img/return_to_mystock.svg" />
+        </a>
+      </button>
+      <input class="searh_bar" type="text" id="search_crypto" name="company_name" placeholder="검색"/>
+      <button class="reset_icon" type="button">
+        <a href="">
+          <img src="/static/stock/img/reset.png" />
+        </a>
+      </button>
+    </div>
+      <div class="card" style="margin-left: 200px; margin-top: 50px; width: 100%; height: 60px; margin-bottom: 10px;">
+      <div style="display: flex;">
+        <img style="width:80px; margin-right: 90px;" src="https://static.upbit.com/logos/{{crypto_ticker.ticker}}.png" alt="">
+        <div>
+          <h2>{{crypto_ticker.name}}</h2>
+          <h3>평가금액 : {{crypto_ticker.current_value}}</h3>
+        </div>
+      </div>
+      <div style="display: flex;">
+        <p style="margin-right: 20px;">{{crypto_ticker.ticker}}</p>
+        <p style="margin-right: 20px;">|</p>
+        <p>{{crypto_ticker.market}}</p>
+      </div>
+    </div>
+    <div class="number_and_price_container">
+      <form action="" method="POST">
+      {% csrf_token %}
+      <div id="selected_card"></div>
+      <div class="number_and_price">
+        <div class="number_group">
+          <div class="number_and_price_title">수량</div>
+          <input
+            id="quantity"
+            class="number_bar"
+            type="text"
+            name="quantity"
+            placeholder="주식 수량을 입력하세요"
+          />
+        </div>
+        <div class="price_group">
+          <div class="number_and_price_title">가격</div>
+          <input
+            class="prince_bar"
+            type="text"
+            name="price"
+            placeholder="주식 가격을 입력하세요"
+          />
+        </div>
+        <button class="summit_button" type="submit">종목등록</button>
+      </div>
+    </form>
+    </div>
+</div>
+<script>
+  $('.number_and_price_container').show();
+</script>
+{% endblock %}

@@ -1,0 +1,213 @@
+{% extends "base.html" %} {% block contents %}
+<style>
+  .container {
+    width: 1920px;
+    height: 1080px;
+    margin:-8px;
+    background: #E5E5E5;
+  }
+  .background {
+    position: absolute;
+    width: 1920px;
+    height: 856px;
+    left: 0px;
+    top: -1px;
+    background: #3a48ce;
+  }
+  .logo {
+    position: absolute;
+    width: 204px;
+    height: 54px;
+    left: 48px;
+    top: 63px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    color: #fce893;
+  }
+  .logo2 {
+    color: white;
+  }
+  .create_account {
+    position: absolute;
+    width: 584px;
+    height: 763px;
+    left: 203px;
+    top: 204px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  .title {
+    position: absolute;
+    width: 383px;
+    height: 72px;
+    left: 314px;
+    top: 259px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    color: #000000;
+  }
+  .nickname {
+    position: absolute;
+    width: 480px;
+    height: 64px;
+    left: 257px;
+    top: 401px;
+    background: #ecf3fe;
+    border: 0;
+  }
+  .phone_number {
+    position: absolute;
+    width: 480px;
+    height: 64px;
+    left: 255px;
+    top: 475px;
+    background: #ECF3FE;
+    border:0;
+  }
+  .authentication_number {
+    position: absolute;
+    width: 480px;
+    height: 64px;
+    left: 255px;
+    top: 607px;
+    background: #ECF3FE;
+    border:0;
+  }
+  .authentication_number_send {
+    position: absolute;
+    width: 120px;
+    height: 27px;
+    left: 618px;
+    top: 553px;
+    font-family: Noto Sans CJK KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+  }
+  .error{
+    position: absolute;
+    width: 480px;
+    height: 50px;
+    left: 360px;
+    top: 660px;
+  }
+  .signup_button{
+    position: absolute;
+    width: 480px;
+    height: 64px;
+    left: 255px;
+    top: 698px;
+    background: #3A48CE;
+    font-family: Noto Sans CJK KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+    border:0;
+  }
+  .message {
+    position: absolute;
+    margin:0px;
+    width: 200px;
+    height: 27px;
+    left: 400px;
+    top: 802px;
+    font-family: Noto Sans CJK KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+  }
+  .social_signup_button {
+    position: absolute;
+    width: 584px;   
+    height: 112px;
+    left: 203px;
+    top: 855px;
+    background: #FCE893;
+    border-radius: 0px 0px 10px 10px;
+    font-family: Noto Sans CJK KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    border: 0;
+  }
+  .explanation {
+    position: absolute;
+    width: 750px;
+    height: 175px;
+    left: 976px;
+    top: 259px;
+    font-family: Noto Sans CJK KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 53px;
+    color: #ffffff;
+  }
+
+</style>
+<div class=".container">
+    <div class="background"></div>
+    <div class="logo">Rocket<span class="logo2">folio</span></div>
+    <div class="create_account"></div>
+    <div class="title">Create Account</div>
+    <div class="explanation">
+      사용할 닉네임과 전화번호를 입력해 주세요 :)<br />
+    </div>
+</div>
+<form action="" method="POST">
+    {% csrf_token %} 
+    {% for field in form %}
+    <input class="form-group">
+      {% if field.label == "닉네임" %}
+      <input
+        class="nickname"
+        type="{{field.field.widget.input_type}}"
+        name="{{field.name}}"
+        placeholder="{{field.label}}"
+      />
+      {% endif %}
+      {% if field.label == "전화번호" %}
+      <input
+        class="phone_number"
+        type="{{field.field.widget.input_type}}"
+        placeholder="{{field.label}}"
+        name="{{field.name}}"
+      />
+      {% endif %}
+    </div>
+    {% if field.errors %}
+    <span style="color: red">{{field.errors}}</span>
+    {% endif %} {% endfor %}
+    <button class="signup_button" type="submit">
+      회원가입
+    </button>
+  </form>
+  <div class="authentication_number_send">인증번호 발송</div>
+  <input
+    class="authentication_number"
+    type=""
+    placeholder="인증번호 입력"
+    name="{{field.name}}"
+  />
+  <p class="message">SNS연동으로 빠른 가입!</p>
+  <button class="social_signup_button" type="submit">
+    카카오톡으로 계속하기
+  </button>
+</form>
+</div>
+
+{% endblock %}

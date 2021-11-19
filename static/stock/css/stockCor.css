@@ -1,0 +1,468 @@
+body{
+  zoom:0.7;
+}
+.container_cor_backtesting {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 83%;
+}
+.cor_title_box {
+  display: flex;
+  flex-direction: column;
+}
+.cor_title {
+  margin-top: 30px;
+  margin-left: 80px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #3c42d6;
+}
+#title2 {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+}
+.total_cor_backtesting_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.average_gain_rate_correlation_container {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+}
+.average_gain_rate_correlation_box {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#special_average_gain_rate_correlation_box {
+  border-right: 1px solid #707070;
+}
+#rate2 {
+  margin: 0px;
+}
+
+.portfolio_summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.stock_info_box {
+  display: flex;
+  justify-content: space-between;
+}
+.stock_info {
+  margin: 40px;
+  width: 550px;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  background: #e0eafd;
+  border-radius: 20px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.stock_info_name {
+  display: flex;
+  flex-direction: column;
+}
+.stock_price_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 200px;
+  color: #ff0000;
+}
+.asset_stock_name {
+  width: 200px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 41px;
+  color: #000000;
+}
+.stock_code,
+.stock_purchase_price {
+  margin-top: 10px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 30px;
+  color: #4a536a;
+}
+.stock_price_info_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stock_price_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stock_price {
+  width: auto;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+}
+.stock_gain_loss_rate {
+  font-weight: 500;
+  font-size: 22px;
+}
+.asset_analysis_box_title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #3a48ce;
+  float: inline-start;
+}
+.asset_analysis_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.exception {
+  display: flex;
+  color: red;
+  font-weight: 550;
+  font-family: Apple SD Gothic Neo;
+}
+.error_info {
+  color: red;
+  margin-right: 300px;
+}
+.cor_form_value_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+.analysis_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+}
+.selected_stocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.analysis_button {
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  width: 245px;
+  height: 71px;
+  background-color: #3a48ce;
+  border: 0;
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.analysis_button_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-right: 17%;
+}
+.analysis_button img {
+  width: 52.06px;
+  height: 50.06px;
+  padding-right: 20%;
+  background-color: #3a48ce;
+  border: 0;
+}
+select {
+  width: 188px;
+  height: 71px;
+  margin: 20px;
+  border: 2px solid #737df7;
+  font-family: Source Han Sans K;
+  color: #737df7;
+  font-size: 20px;
+  font-weight: 550;
+  border-radius: 40px;
+  appearance: none;
+  text-align-last: center;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+}
+.selected_stocks {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.cor_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin-right: 12%;
+}
+.cor_box_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  width: 92%;
+  padding: 20px;
+  border-bottom: 1px solid #4b5368;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+.cor_box_values {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stock_name {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  padding: 30px;
+}
+.cor_values {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 40px;
+  width: 150px;
+  height: 50px;
+}
+.stock_names {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+table {
+  width: 1000px;
+  height: 400px;
+  font-size: 24px;
+  text-align: center;
+  border-spacing: 25px;
+  border-collapse: separate;
+}
+td {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 28px;
+}
+tr {
+  border-collapse: separate;
+  border-spacing: 20px 100px;
+}
+.backtesting_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+  margin-right: 1185px;
+  margin-bottom: 100px;
+}
+.backtesting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 300px;
+}
+.backtesting_form_box {
+  display: flex;
+}
+.backtesting_form_box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backtesting_form_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+}
+#special_backtesting_form_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  margin-right: 1220px;
+}
+#special_title {
+  padding-right: 350px;
+}
+.backtesting_info {
+  margin-top: 60px;
+  margin-right: 90px;
+  width: 80%;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+.backtesting_info_box {
+  border-left: 1px solid #707070;
+  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.price_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.price_value {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  margin-top: 20px;
+  color: #000000;
+}
+#backtesting_form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+#year_select,
+#month_select {
+  color: #000000;
+}
+#chart-1 {
+  margin-top: 100px;
+}
+.backtesting_chart_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio_assets_box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+}
+.portfolio_assets_title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 21px;
+  line-height: 31px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.portfolio_assets_name_rate {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.portfolio_assets_rate_title {
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.portfolio_assets_pereoid {
+  display: flex;
+}
+.portfolio_assets {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.portfolio_assets_name {
+  background: #ecf3fe;
+  width: 263px;
+  height: 60px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin: 10px;
+}
+
+.portfolio_assets_rate {
+  background: #ecf3fe;
+  width: 202px;
+  height: 60px;
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin: 10px;
+}

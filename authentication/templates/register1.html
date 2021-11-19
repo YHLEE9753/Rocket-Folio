@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    {% load socialaccount %} {% providers_media_js %}
+    {% load static %}
+    <link rel="stylesheet" property="stylesheet" href="{% static 'authentication/css/register1.css' %}"/>
+  </head>
+  <body>
+    <div class="login_container">
+      <div class="logo">Rocket<span class="logo2">folio</span></div>
+      <div class="title_box">
+        <div class="logo_title">사용할 <span class="logo_title2">닉네임과 이메일</span>을 입력해 주세요 :)</div>
+        <div class="create_account">
+          <img class="logo_img" src="{% static 'authentication/img/user.svg' %}">
+          <div class="title">Create Account</div>
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <input class="name" type="text" name="nickname" placeholder="닉네임"/>
+              <input class="email" type="email" name="email" placeholder="이메일"/>
+            </div> 
+            <button class="signup_button" type="submit">시작하기</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

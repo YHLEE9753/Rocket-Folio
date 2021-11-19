@@ -1,0 +1,56 @@
+{% extends "RocketFolio/templates/sidebar.html" %} {% block contents %} 
+{% load static %}
+<link rel="stylesheet" property="stylesheet" href="{% static 'stock/css/plusStock.css' %}"/>
+<script type="text/javascript" src="{% static 'stock/js/plusStock.js' %}"></script>
+<div class="container_search">
+  <form class="search_form" action="{% url 'plusStock'%}" method="POST">
+    {% csrf_token %}
+    <div class="header">
+      <button class="return_button" type="button">
+        <a href="{% url 'myStock' %}">
+          <img src="/static/stock/img/return_to_mystock.svg" />
+        </a>
+      </button>
+      <input class="searh_bar" type="text" onkeyup="filter();" id="value" name="company_name" placeholder=" 검색"/>
+      <button class="reset_icon" type="button">
+        <a href="{% url 'plusStock' %}">
+          <img src="/static/stock/img/reset.svg" />
+        </a>
+      </button>
+    </div>
+    <div class="number_and_price_container">
+      <div class="number_and_price">
+        <div class="number_group">
+          <div class="number_and_price_title">수량</div>
+          <input
+            class="number_bar"
+            type="text"
+            name="buy_number"
+            placeholder="주식 수량을 입력하세요"
+          /> 
+        </div>
+        <div class="price_group">
+          <div class="number_and_price_title">가격</div>
+          <input
+            class="prince_bar"
+            type="text"
+            name="buy_price"
+            placeholder="주식 가격을 입력하세요"
+          />
+        </div>
+        <button class="summit_button" type="submit">종목등록</button>
+      </div>
+    </div>
+  </form>
+  {% for stocks in stocklist %}
+  <div class="stock_item">
+    <button class="stock_btn" onclick="onDisplay();">
+      <div class="stock_info">
+        <div id="stock_name">{{stocks.company_name}}</div>
+        <div id="stock_code">{{stocks.code}}</div>
+      </div>
+    </button>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
