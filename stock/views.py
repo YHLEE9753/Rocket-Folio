@@ -25,6 +25,386 @@ from collections import OrderedDict
 from .fusioncharts import FusionCharts
 
 # DB 추가 파트
+
+# dailychart1
+def stockToDB1(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart1.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[:10000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB2(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart1.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[10000:20000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB3(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart1.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[20000:30000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB4(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart1.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[30000:]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+# dailychart2
+def stockToDB5(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart2.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[:10000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB6(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart2.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[10000:20000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB7(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart2.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[20000:]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+#dailychart3
+def stockToDB8(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart3.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[:10000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB9(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart3.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[10000:20000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB10(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart3.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[20000:]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB11(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart4.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[:10000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB12(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart4.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[10000:20000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB13(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart4.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[20000:30000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB14(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart4.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[30000:]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+# dailychart5
+def stockToDB15(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart5.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[:10000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB16(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart5.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[10000:20000]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+def stockToDB17(request):
+    count = 0
+    csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
+    name = 'dailychart5.csv'
+    f = open(csv_path+name, 'r', encoding='utf-8')
+    data = f.readlines[20000:]
+    for line in data:
+        if line[2]=='KOSPI' or line[2] =='KOSDAQ':
+            onestock = Stockhistory()
+            onestock.code = line[0]
+            onestock.name = line[1]
+            onestock.section=line[2]
+            onestock.date = line[3]
+            onestock.open = float(line[4])
+            onestock.high = float(line[5])
+            onestock.low = float(line[6])
+            onestock.close = float(line[7])
+            onestock.save()
+            count += 1
+        f.close() 
+    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+
+
 def stockToDB(request):
     count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
