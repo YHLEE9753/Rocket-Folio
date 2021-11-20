@@ -29,7 +29,7 @@ from .fusioncharts import FusionCharts
 # dailychart1
 def stockToDB1(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart1.csv'
+    name = '/dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[:10000]
     for line in data:
@@ -49,7 +49,7 @@ def stockToDB1(request):
 
 def stockToDB2(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart1.csv'
+    name = '/dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[10000:20000]
     for line in data:
@@ -69,7 +69,7 @@ def stockToDB2(request):
 
 def stockToDB3(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart1.csv'
+    name = '/dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[20000:30000]
     for line in data:
@@ -89,7 +89,7 @@ def stockToDB3(request):
 
 def stockToDB4(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart1.csv'
+    name = '/dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[30000:]
     for line in data:
@@ -110,7 +110,7 @@ def stockToDB4(request):
 # dailychart2
 def stockToDB5(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart2.csv'
+    name = '/dailychart2.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[:10000]
     for line in data:
@@ -130,7 +130,7 @@ def stockToDB5(request):
 
 def stockToDB6(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart2.csv'
+    name = '/dailychart2.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[10000:20000]
     for line in data:
@@ -150,7 +150,7 @@ def stockToDB6(request):
 
 def stockToDB7(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart2.csv'
+    name = '/dailychart2.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[20000:]
     for line in data:
@@ -171,7 +171,7 @@ def stockToDB7(request):
 #dailychart3
 def stockToDB8(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart3.csv'
+    name = '/dailychart3.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[:10000]
     for line in data:
@@ -191,7 +191,7 @@ def stockToDB8(request):
 
 def stockToDB9(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart3.csv'
+    name = '/dailychart3.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[10000:20000]
     for line in data:
@@ -211,7 +211,7 @@ def stockToDB9(request):
 
 def stockToDB10(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart3.csv'
+    name = '/dailychart3.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[20000:]
     for line in data:
@@ -231,7 +231,7 @@ def stockToDB10(request):
 
 def stockToDB11(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart4.csv'
+    name = '/dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[:10000]
     for line in data:
@@ -251,7 +251,7 @@ def stockToDB11(request):
 
 def stockToDB12(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart4.csv'
+    name = '/dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[10000:20000]
     for line in data:
@@ -271,7 +271,7 @@ def stockToDB12(request):
 
 def stockToDB13(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart4.csv'
+    name = '/dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[20000:30000]
     for line in data:
@@ -291,7 +291,7 @@ def stockToDB13(request):
 
 def stockToDB14(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart4.csv'
+    name = '/dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[30000:]
     for line in data:
@@ -312,7 +312,7 @@ def stockToDB14(request):
 # dailychart5
 def stockToDB15(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart5.csv'
+    name = '/dailychart5.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[:10000]
     for line in data:
@@ -332,7 +332,7 @@ def stockToDB15(request):
 
 def stockToDB16(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart5.csv'
+    name = '/dailychart5.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[10000:20000]
     for line in data:
@@ -352,7 +352,7 @@ def stockToDB16(request):
 
 def stockToDB17(request):
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
-    name = 'dailychart5.csv'
+    name = '/dailychart5.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
     data = f.readlines[20000:]
     for line in data:
