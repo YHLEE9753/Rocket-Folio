@@ -28,7 +28,6 @@ from .fusioncharts import FusionCharts
 
 # dailychart1
 def stockToDB1(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -45,12 +44,10 @@ def stockToDB1(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB2(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -67,12 +64,10 @@ def stockToDB2(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB3(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -89,12 +84,10 @@ def stockToDB3(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB4(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart1.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -111,13 +104,11 @@ def stockToDB4(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 # dailychart2
 def stockToDB5(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart2.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -134,12 +125,10 @@ def stockToDB5(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB6(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart2.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -156,12 +145,10 @@ def stockToDB6(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB7(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart2.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -178,13 +165,11 @@ def stockToDB7(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 #dailychart3
 def stockToDB8(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart3.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -201,12 +186,10 @@ def stockToDB8(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB9(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart3.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -223,12 +206,10 @@ def stockToDB9(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB10(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart3.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -245,12 +226,10 @@ def stockToDB10(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB11(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -267,12 +246,10 @@ def stockToDB11(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB12(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -289,12 +266,10 @@ def stockToDB12(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB13(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -311,12 +286,10 @@ def stockToDB13(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB14(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart4.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -333,13 +306,11 @@ def stockToDB14(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 # dailychart5
 def stockToDB15(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart5.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -356,12 +327,10 @@ def stockToDB15(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg의 Stock을 저장하였습니다"})
 
 def stockToDB16(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart5.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -378,12 +347,10 @@ def stockToDB16(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 def stockToDB17(request):
-    count = 0
     csv_path = os.path.join(BASE_DIR, 'static','stock','allstockdata')
     name = 'dailychart5.csv'
     f = open(csv_path+name, 'r', encoding='utf-8')
@@ -400,9 +367,8 @@ def stockToDB17(request):
             onestock.low = float(line[6])
             onestock.close = float(line[7])
             onestock.save()
-            count += 1
         f.close() 
-    return render(request, "db_stockToDB.html",{"msg":f"{count}개의 Stock을 저장하였습니다"})
+    return render(request, "db_stockToDB.html",{"msg개의 Stock을 저장하였습니다"})
 
 
 def stockToDB(request):
