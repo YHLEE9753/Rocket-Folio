@@ -5,6 +5,7 @@ body{
   display: flex;
   flex-direction: column;
   flex-basis: 83%;
+  background-color: #f5f9ff;
 }
 .cor_title_box {
   display: flex;
@@ -12,7 +13,7 @@ body{
 }
 .cor_title {
   margin-top: 30px;
-  margin-left: 80px;
+  margin-left: 120px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -35,11 +36,15 @@ body{
 }
 .average_gain_rate_correlation_container {
   margin-top: 70px;
+  margin-right: 50px;
   display: flex;
   align-items: center;
   width: 80%;
   padding: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   border-radius: 20px;
+  background-color: #ffffff;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
 }
 .average_gain_rate_correlation_box {
@@ -66,6 +71,8 @@ body{
 .stock_info_box {
   display: flex;
   justify-content: space-between;
+  width: 88%;
+  margin-right: 50px;
 }
 .stock_info {
   margin: 40px;
@@ -146,22 +153,13 @@ body{
   align-items: center;
   margin-bottom: 100px;
 }
-.exception {
-  display: flex;
-  color: red;
-  font-weight: 550;
-  font-family: Apple SD Gothic Neo;
-}
-.error_info {
-  color: red;
-  margin-right: 300px;
-}
+
 .cor_form_value_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 95%;
+  width: 100%;
 }
 .analysis_title {
   font-family: Apple SD Gothic Neo;
@@ -182,7 +180,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 65px;
   width: 245px;
   height: 71px;
   background-color: #3a48ce;
@@ -206,10 +204,14 @@ body{
   background-color: #3a48ce;
   border: 0;
 }
+.cor_form_container {
+  margin-left: 20px;
+}
 select {
   width: 188px;
   height: 71px;
-  margin: 20px;
+  margin: 25px;
+  margin-right: 22px;
   border: 2px solid #737df7;
   font-family: Source Han Sans K;
   color: #737df7;
@@ -231,9 +233,8 @@ select {
 .cor_box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 95%;
-  margin-right: 12%;
+  width: 88%;
+  margin-right: 9%;
 }
 .cor_box_title {
   font-family: Apple SD Gothic Neo;
@@ -280,8 +281,8 @@ select {
   color: #000000;
 }
 table {
-  width: 1000px;
-  height: 400px;
+  width: 1590px;
+  height: 600px;
   font-size: 24px;
   text-align: center;
   border-spacing: 25px;
@@ -321,6 +322,7 @@ tr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 40px;
 }
 .backtesting_form_title {
   font-family: Apple SD Gothic Neo;
@@ -340,11 +342,13 @@ tr {
   margin-right: 1220px;
 }
 #special_title {
-  padding-right: 350px;
+  width: auto;
+  padding-right: 130px;
+  margin-right: 250px;
 }
 .backtesting_info {
   margin-top: 60px;
-  margin-right: 90px;
+  margin-right: 105px;
   width: 80%;
   font-family: Apple SD Gothic Neo;
   font-style: normal;
@@ -384,13 +388,18 @@ tr {
   align-items: center;
   justify-content: center;
   margin-bottom: 80px;
+  margin-right: 25px;
 }
 #year_select,
 #month_select {
   color: #000000;
 }
+#year_select {
+  margin-left: 110px;
+}
 #chart-1 {
   margin-top: 100px;
+  margin-right: 50px;
 }
 .backtesting_chart_box {
   display: flex;
@@ -401,6 +410,7 @@ tr {
   display: flex;
   flex-direction: column;
   margin-top: 120px;
+  margin-right: 70px;
 }
 .portfolio_assets_title {
   font-family: Poppins;
@@ -414,18 +424,20 @@ tr {
 .portfolio_assets_name_rate {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 5px;
 }
 .portfolio_assets_rate_title {
   font-family: Apple SD Gothic Neo;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
 }
 .portfolio_assets_pereoid {
   display: flex;
+  margin-left: 20px;
 }
 .portfolio_assets {
   display: flex;
@@ -435,7 +447,7 @@ tr {
 
 .portfolio_assets_name {
   background: #ecf3fe;
-  width: 263px;
+  width: 202px;
   height: 60px;
   font-family: Source Han Sans K;
   font-style: normal;
@@ -451,7 +463,7 @@ tr {
 }
 
 .portfolio_assets_rate {
-  background: #ecf3fe;
+  background: #e0eafd;
   width: 202px;
   height: 60px;
   font-family: Source Han Sans K;
@@ -465,4 +477,43 @@ tr {
   align-items: center;
   padding-left: 20px;
   margin: 10px;
+}
+.detail_container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.detail_title {
+  display: flex;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  width: 85%;
+  margin-left: 30px;
+  justify-content: space-between;
+}
+#detail_title2 {
+  margin-left: 30px;
+}
+
+#detail_title4 {
+  margin-right: 40px;
+}
+#detail_title5 {
+  margin-right: 20px;
+}
+.chart_title {
+  margin-top: 60px;
+  margin-right: 1340px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
 }

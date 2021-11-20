@@ -1,30 +1,28 @@
-body{
+body {
   zoom:0.7;
 }
-.container_myportfolio {
+.container_mystock {
   display: flex;
   flex-direction: column;
   flex-basis: 83%;
-  background-color:black;
 }
 .portfolio_title {
-  margin-top: 40px;
-  padding-left: 50px;
+  margin-top: 30px;
+  margin-left: 80px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
-  line-height: 30px;
   color: #3c42d6;
 }
 .portfolio_title_2 {
-  margin-top: 10px;
-  padding-left: 50px;
+  margin-top: 30px;
+  margin-left: 80px;
   font-family: Apple SD Gothic Neo;
   font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 71px;
+  font-weight: 550;
+  font-size: 36px;
+  line-height: 43px;
   color: #000000;
 }
 .total_portfolio_info {
@@ -67,9 +65,9 @@ body{
   line-height: 72px;
 }
 .total_gain_loss_data {
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   padding-right: 80px;
   color: #ff0000;
 }
@@ -94,6 +92,8 @@ body{
   flex-direction: column;
   background: #f5f9ff;
   border-radius: 30px;
+  padding-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 #chart-1 {
@@ -115,17 +115,17 @@ body{
   line-height: 46px;
   color: #000000;
   border-bottom: 4px solid #bfd3f8;
-  padding-bottom:20px;
-  margin-right:50px;
+  padding-bottom: 20px;
+  margin-right: 50px;
 }
 .asset_box {
   margin-top: 20px;
   display: flex;
 }
-.stock_title_and_detail{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
+.stock_title_and_detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .stocks_title {
   margin-top: 100px;
@@ -133,32 +133,54 @@ body{
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
-  font-weight:600;
+  font-weight: 600;
   line-height: 41px;
   color: #4a536a;
 }
-.stocks_detail_button{
-  border:0;
-  background-color:#f5f9ff;
-  color:#4a536a;
+.detail_button {
+  border: 0;
+  background-color: #f5f9ff;
+  padding-top: 100px;
+  padding-left: 30px;
+}
+#stock_detail_page a {
+  text-decoration-line: none;
+  color: #4a536a;
   font-size: 20px;
-  font-weight:600;
-  margin-right:70px;
+  font-weight: 600;
+  margin-right: 70px;
+}
+.stock_detail_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stock_asset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 50%;
+}
+.asset_box2 {
+  display: flex;
+  flex-direction: column;
 }
 .stock_box {
   margin-top: 50px;
-  display: flex;
-  width: 650px;
+  justify-content: space-between;
+  width: 710px;
+  background-color: #ffffff;
   border-radius: 30px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
 }
 .stock_info {
-  display:flex;
-  justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
   border: 0;
-  padding: 20px;
   background: #ffffff;
-  border-top-left-radius:20px;
-  border-bottom-left-radius:20px;
+  border-radius: 20px;
+  padding: 25px;
+  flex-basis: 43%;
 }
 .stock_info_name {
   display: flex;
@@ -166,13 +188,10 @@ body{
 }
 .stock_price_info {
   display: flex;
-  flex-direction:column;
-  align-items:flex-end;
-  margin-left: 200px;
-  color: #ff0000;
+  flex-direction: column;
+  margin-left: auto;
 }
 .stock_name {
-  width: 200px;
   font-family: Source Han Sans K;
   font-style: normal;
   font-weight: 600;
@@ -182,176 +201,94 @@ body{
 }
 .stock_code,
 .stock_purchase_price {
-  margin-top:10px;
+  margin-top: 10px;
   font-family: Source Han Sans K;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 21px;
   line-height: 30px;
   color: #4a536a;
 }
-.stock_price_box{
+.stock_price_info_box {
   display: flex;
-  flex-direction:column;
-  align-items:center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stock_price_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .stock_price {
-  padding-bottom:10px;
+  width: auto;
+  padding-bottom: 10px;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 24px;
 }
-#stock_gain_loss {
+.crypto_price {
+  width: auto;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+}
+.stock_gain_loss_rate {
   font-weight: 500;
   font-size: 22px;
 }
-.delete_button{
-  border:0;
-  color:#FFFFFF;
-  background-color:#bfd3f8;
-  font-weight:550;
-  border-top-right-radius:20px;
-  border-bottom-right-radius:20px;
-}
-.cryptocurrencies_title {
-  margin-top: 100px;
-  font-family: Source Han Sans K;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 41px;
-  color: #4a536a;
-}
-.cryptocurrencies_box {
-  margin-top: 50px;
-  display: flex;
-  width: 650px;
-  border-radius: 30px;
-}
-.cryptocurrencies_info {
-  border: 0;
-  padding: 20px;
-  display: flex;
-  background: #ffffff;
-  border-radius: 30px;
-}
-.cryptocurrencies_info_name {
-  display: flex;
-  flex-direction: column;
-}
-.cryptocurrencies_price_info {
-  display: flex;
-  flex-direction: column;
-  float: right;
-  margin-left: 250px;
-  color: #ff0000;
-}
-.cryptocurrencies_name {
-  font-family: Source Han Sans K;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 41px;
-  color: #000000;
-  margin-bottom: 10px;
-}
-.cryptocurrencies_code,
-.cryptocurrencies_purchase_price {
-  font-family: Source Han Sans K;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 21px;
-  line-height: 30px;
-  color: #4a536a;
-}
-#cryptocurrency_price {
-  margin-left: 60px;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-size: 28px;
-}
-#cryptocurrency_gain_loss {
+.crypto_gain_loss_rate{
   font-weight: 500;
   font-size: 22px;
 }
-
-.portfolio_analysis_title {
-  position: absolute;
-  left: 20.47%;
-  top: 220%;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 42px;
-  color: #000000;
-}
-.my_portfolio_analysis_title {
-  z-index: 1;
-  position: absolute;
-  left: 20.47%;
-  top: 226%;
-  font-family: Apple SD Gothic Neo;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 43px;
-  color: #000000;
-}
-.my_portfolio_analysis {
+.stock_price_detail_info {
   display: flex;
   align-items: center;
-  width: 1447px;
+  justify-content: center;
+  background-color: #ecf3fe;
+  flex-basis: 50%;
+}
+.stock_price_detail_info_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 3px solid #bfd3f8;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.price_title {
+  font-family: Source Han Sans K;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 26px;
+  color: #4a536a;
+  text-align: center;
+}
+.price_value {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+  margin-top: 20px;
+}
+#special_box {
+  border: 0;
+}
+.delete_button {
+  margin-top: 10px;
+  padding: 15px;
   height: 150px;
-  position: absolute;
-  left: 20.16%;
-  top: 253%;
-  background: #00ff00;
-  border-radius: 20px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 3px solid #bfd3f8;
+  background-color: #ffffff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-.average_yield_title {
-  margin-left: 30px;
-  font-family: Apple SD Gothic Neo;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 34px;
-  color: #000000;
-}
-.average_yield {
-  margin-left: 250px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 72px;
-  color: #ff0000;
-}
-.SD_of_yield_title {
+.add_button {
+  margin-top: 60px;
   margin-left: 100px;
-  font-family: Apple SD Gothic Neo;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 34px;
-  color: #000000;
-}
-.SD_of_yield {
-  margin-left: 250px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 72px;
-  color: #000000;
-}
-.correlation_analysis_title {
-  position: absolute;
-  left: 20.57%;
-  top: 280%;
-  font-family: Apple SD Gothic Neo;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 34px;
-  color: #000000;
 }
