@@ -3,7 +3,7 @@ Description=uWSGI service
 After=syslog.target
 
 [Service]
-ExecStart=/home/ubuntu/myvenv/bin/uwsgi -i /srv/Rocket_Folio/.config/uwsgi/RocketFolio.ini
+ExecStart=/home/ubuntu/myvenv/bin/uwsgi -i /srv/Rocket_Folio/.config/uwsgi/mysite.ini
 
 Restart=always
 KillSignal=SIGQUIT
