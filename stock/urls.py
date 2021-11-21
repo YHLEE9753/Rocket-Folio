@@ -13,6 +13,17 @@ urlpatterns = [
 
     # db 추가하기
     path('stockToDB/', stockToDB, name="db_stockToDB"),
+
+    path('companyToDB/', companyToDB, name="db_companyToDB"),
+    path('deletStocklist/', deletStocklist, name="deletStocklist"),
+    path('kospidataToDB/', kospidataToDB, name="kospidataToDB"),
+
+    # db 삭제하기
+    path('deleteStock/<str:name>', deleteStock, name = "deleteStock"),
+
+    # kospi kosdaq db 추가
+    # db 추가하기
+    path('stockToDB/', stockToDB, name="db_stockToDB"),
     path('stockToDB1/', stockToDB1, name="db_stockToDB1"),
     path('stockToDB2/', stockToDB2, name="db_stockToDB2"),
     path('stockToDB3/', stockToDB3, name="db_stockToDB3"),
@@ -30,11 +41,48 @@ urlpatterns = [
     path('stockToDB15/', stockToDB15, name="db_stockToDB15"),
     path('stockToDB16/', stockToDB16, name="db_stockToDB16"),
     path('stockToDB17/', stockToDB17, name="db_stockToDB17"),
-
-    path('companyToDB/', companyToDB, name="db_companyToDB"),
-    path('deletStocklist/', deletStocklist, name="deletStocklist"),
-    path('kospidataToDB/', kospidataToDB, name="kospidataToDB"),
-
-    # db 삭제하기
-    path('deleteStock/<str:name>', deleteStock, name = "deleteStock"),
+    path('stockToDB18/', stockToDB18, name="db_stockToDB18"),
+    path('stockToDB19/', stockToDB19, name="db_stockToDB19"),
+    path('stockToDB20/', stockToDB20, name="db_stockToDB20"),
+    path('stockToDB21/', stockToDB21, name="db_stockToDB21"),
+    path('stockToDB22/', stockToDB22, name="db_stockToDB22"),
+    path('stockToDB23/', stockToDB23, name="db_stockToDB23"),
+    path('stockToDB24/', stockToDB24, name="db_stockToDB24"),
+    path('stockToDB25/', stockToDB25, name="db_stockToDB25"),
+    path('stockToDB26/', stockToDB26, name="db_stockToDB26"),
+    path('stockToDB27/', stockToDB27, name="db_stockToDB27"),
+    path('stockToDB28/', stockToDB28, name="db_stockToDB28"),
+    path('stockToDB29/', stockToDB29, name="db_stockToDB29"),
+    path('stockToDB30/', stockToDB30, name="db_stockToDB30"),
+    path('stockToDB31/', stockToDB31, name="db_stockToDB31"),
+    path('stockToDB32/', stockToDB32, name="db_stockToDB32"),
+    path('stockToDB33/', stockToDB33, name="db_stockToDB33"),
+    path('stockToDB34/', stockToDB34, name="db_stockToDB34"),
+    path('stockToDB35/', stockToDB35, name="db_stockToDB35"),
+    path('stockToDB36/', stockToDB36, name="db_stockToDB36"),
+    path('stockToDB37/', stockToDB37, name="db_stockToDB37"),
+    path('stockToDB38/', stockToDB38, name="db_stockToDB38"),
+    path('stockToDB39/', stockToDB39, name="db_stockToDB39"),
+    path('stockToDB40/', stockToDB40, name="db_stockToDB40"),
+    path('stockToDB41/', stockToDB41, name="db_stockToDB41"),
+    path('stockToDB42/', stockToDB42, name="db_stockToDB42"),
+    path('stockToDB43/', stockToDB43, name="db_stockToDB43"),
+    path('stockToDB44/', stockToDB44, name="db_stockToDB44"),
+    path('stockToDB45/', stockToDB45, name="db_stockToDB45"),
+    path('stockToDB46/', stockToDB46, name="db_stockToDB46"),
+    path('stockToDB47/', stockToDB47, name="db_stockToDB47"),
+    path('stockToDB48/', stockToDB48, name="db_stockToDB48"),
+    path('stockToDB49/', stockToDB49, name="db_stockToDB49"),
+    path('stockToDB50/', stockToDB50, name="db_stockToDB50"),
+    path('stockToDB51/', stockToDB51, name="db_stockToDB51"),
+    path('stockToDB52/', stockToDB52, name="db_stockToDB52"),
+    path('stockToDB53/', stockToDB53, name="db_stockToDB53"),
+    path('stockToDB54/', stockToDB54, name="db_stockToDB54"),
+    path('stockToDB55/', stockToDB55, name="db_stockToDB55"),
+    path('stockToDB56/', stockToDB56, name="db_stockToDB56"),
+    path('stockToDB57/', stockToDB57, name="db_stockToDB57"),
+    path('stockToDB58/', stockToDB58, name="db_stockToDB58"),
+    path('stockToDB59/', stockToDB59, name="db_stockToDB59"),
+    path('stockToDB60/', stockToDB60, name="db_stockToDB60"),
+    path('stockToDB61/', stockToDB61, name="db_stockToDB61"),
 ]
