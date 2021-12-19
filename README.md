@@ -1,8 +1,8 @@
 # Rocket_Folio
 
-Backend = Django
-Frontend = HTML, CSS, CS
-Deployment = AWS(EC2), uwsgi, nginx
+Backend = Django<br>
+Frontend = HTML, CSS, CS<br>
+Deployment = AWS(EC2), uwsgi, nginx<br>
 
 ## Description
 웹 어플리케이션으로 비트코인 주식 자산 포트폴리오 어플리케이션입니다.
