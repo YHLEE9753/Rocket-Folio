@@ -1,4 +1,4 @@
-# Rocket_Folio
+# Rocket-Folio
 
 Backend = Django<br>
 Frontend = HTML, CSS, CS<br>
