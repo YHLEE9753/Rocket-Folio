@@ -22,4 +22,16 @@ Deployment = AWS(EC2), uwsgi, nginx<br>
 4. 최대 2016년 부터의 백테스팅 그래프 제공
 5. 백테스팅 구성 주식데이터 정보 제공
 
-자세한 설명 : PPT 
+## Images
+**구글로그인**<br>
+![1_login](https://user-images.githubusercontent.com/71916223/151946022-fe7e7ff4-ca91-45de-9b4c-ab62eab70706.png)
+<br><br>**포트폴리오**<br>
+![2_pf](https://user-images.githubusercontent.com/71916223/151946028-1848dabc-20cc-42e0-aba6-88f74288656d.png)
+<br><br>**분석**<br>
+![3_an1](https://user-images.githubusercontent.com/71916223/151946029-0b23f521-a0e2-4be2-b7da-251a0c258305.png)
+![4_an2](https://user-images.githubusercontent.com/71916223/151946032-2cec61d1-1d20-4ebd-bce5-03811c55a639.png)
+![5_an3](https://user-images.githubusercontent.com/71916223/151946033-ce82281e-2a57-41fd-93ce-cda622c806a4.png)
+![6_an4](https://user-images.githubusercontent.com/71916223/151946034-b0bee6a1-e2cd-4cad-a574-74ad5b4ee264.png)
+
+
+### 자세한 설명 : PPT 
